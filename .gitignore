@@ -1,0 +1,55 @@
+# ==========================================
+# Python / Ambientes Virtuais
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# ==========================================
+# YOLO / Ultralytics (Treinamento)
+# ==========================================
+# Ignora a pasta 'runs' onde ficam os logs, gráficos e checkpoints a cada época
+runs/
+# Ignora os pesos do PyTorch (gigantes)
+*.pt
+# Ignora modelos exportados para a Jetson e outros formatos
+*.engine
+*.trt
+*.onnx
+*.torchscript
+
+# ==========================================
+# Datasets e Mídias (Roboflow / RealSense)
+# ==========================================
+# Pastas onde você vai extrair o .zip do Roboflow
+datasets/
+data/
+# Arquivos compactados e vídeos brutos da câmera
+*.zip
+*.tar.gz
+*.rar
+*.mp4
+*.avi
+# Ignora arquivos de gravação de dados de sensores/tópicos (se for usar)
+*.bag
+*.db3
+
+# ==========================================
+# ROS 2 Workspace (Go2 Edu / Jetson)
+# ==========================================
+# Se este projeto viver dentro de um workspace ROS 2, ignore as pastas de compilação
+build/
+install/
+log/
+
+# ==========================================
+# IDEs e Sistema Operacional
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
