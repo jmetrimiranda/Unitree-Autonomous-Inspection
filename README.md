@@ -15,18 +15,17 @@ This repository demonstrates the integration of **Edge AI (YOLOv8)**, **3D SLAM 
 
 To demonstrate full technical capability within an optimized development cycle, this project maps and inspects a high-fidelity **"Critical Infrastructure Zone"** (e.g., a critical machinery cluster corridor). This proof-of-concept proves that the entire pipeline can be rapidly tested, validated, and deployed on the edge before scaling to larger environments.
 
-### 1. High-Fidelity Targeted Mapping & Environment Context
+### 1. Autonomous Industrial Patrol & Data Collection
+
+![Unitree Go2 Autonomous Field Patrol](docs/Gif1.gif)
+
+*Dual-view demonstration of the quadruped executing a patrol route in the industrial plant, showcasing both the third-person perspective and the robot's onboard camera feed used for spatial awareness.*
+
+### 2. High-Fidelity Targeted Mapping & Environment Context
 
 ![Unitree Go2 traversing critical machinery corridor](docs/Gif2.gif)
 
 *The video shows the Unitree Go2 navigating a complex industrial corridor with specific machinery (e.g., control cabinets, machinery with pipes). This targeted mapping approach allows for generating the necessary environmental context for a targeted inspection route.*
-
-### 2. Resulting 3D Plant Mapping (Hesai XT-16 LiDAR)
-*Mapping generated via FAST-LIO execution on the base station from Edge ROSbag data.*
-
-![3D High-Fidelity Map of the Inspection Zone](docs/3d_map_rviz.png)
-
-*The resulting dense point cloud of the specified machinery zone, processed using pointcloud and IMU data.*
 
 ---
 
@@ -39,10 +38,15 @@ To demonstrate full technical capability within an optimized development cycle, 
 The system relies on a decentralized communication architecture using **CycloneDDS**. This configuration, implemented via a custom XML file, routes all ROS 2 traffic through the `wlan0` interface. This allows the robot's Nvidia Orin board (running ROS 2 Foxy) to communicate peer-to-peer over local Wi-Fi with a high-performance off-board base station (Dell Alienware running ROS 2 Jazzy), without mobile internet constraints.
 
 ---
-
 ## 🧠 Machine Learning & Computer Vision
 
 The core mission is active PPE monitoring. The vision system processes frames from the RealSense camera to detect workers missing mandatory safety equipment.
+
+![Active PPE Monitoring in the Field](docs/Gif4.gif)
+
+*The robot actively monitoring personnel on-site. The onboard camera captures these dynamic interactions to evaluate worker PPE compliance using the trained YOLOv8 edge model.*
+
+
 
 ### Data Extraction Pipeline (MLOps)
 
