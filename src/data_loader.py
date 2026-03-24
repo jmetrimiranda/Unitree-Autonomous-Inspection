@@ -11,7 +11,15 @@ API_KEY = os.getenv("ROBOFLOW_API_KEY")
 # 3. Faz o download do dataset
 rf = Roboflow(api_key=API_KEY)
 project = rf.workspace("robotdog-5oy4l").project("my-first-project-vluen")
-version = project.version(4)
+version = project.version(5)
 
 # O dataset será baixado e extraído para a pasta atual
 dataset = version.download("yolov8")
+
+
+
+
+
+
+
+                
