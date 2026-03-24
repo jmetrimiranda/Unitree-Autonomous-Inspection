@@ -5,7 +5,7 @@ model = YOLO('yolov8s.pt')
 
 # 2. Configurações de Treinamento
 results = model.train(
-    data=r'/home/jorgemetri/Desktop/Helmet_Detection_Unitree/data/raw/My-First-Project-4/data.yaml',
+    data=r'/home/jorgemetri/Desktop/Helmet_Detection_Unitree/data/raw/My-First-Project-5/data.yaml',
     epochs=100,             
     patience=20,            
     imgsz=640,              
@@ -15,7 +15,7 @@ results = model.train(
     amp=True,               
     optimizer='auto',       
     project='Go2_Edu_Detect', 
-    name='yolov8s_realsense', 
+    name='yolov8s_realsense_v5', 
     
     mosaic=1.0,             
     close_mosaic=10,        
